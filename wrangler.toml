@@ -7,6 +7,9 @@ main = "worker/worker.js"
 # 更新为最新的兼容性日期，满足 Cloudflare 新版要求
 compatibility_date = "2026-05-31"
 
+# 显式保留 workers.dev 入口，避免后续部署因路由推断关闭默认域名。
+workers_dev = true
+
 # 新版 Cloudflare (Wrangler v3.109.0+) 强烈建议添加的日志观测配置，消除构建警告
 [observability]
 enabled = true
